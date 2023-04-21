@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
+#page {
+    min-width: 300px;
+}
+
+
+#header {
+    background-color: #D5B9B2;
+    height: 60px;
+}
+
+
+#navbarDiv {
+    height: 100%;
+    float: right;
+    padding-right: 5px;
+    display: flex;
+    align-items: center;
+}
+
+#navbar {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    column-gap: 2vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-options {
+    color: rgb(244, 244, 244);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-options:hover {
+    border-bottom: 2px solid #6D2E46;
+}
+
+
+
+
+
+
+#dropdownNavbarDiv {
+    display: none;
+    padding: 8px;
+    min-width: 100px;
+}
+
+#dropdownNavbar {
+    display: none;
+    /* display: flex; */
+    /* flex-direction: column; */
+    row-gap: 3%;
+
+    padding-left: 5px;
+    background-color: #D5B9B2;
+}
+
+.nav-dropdown-options {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+
+
+
+#footerNavbarDiv {
+    display: none;
+    background-color: #D5B9B2;
+    height: 50px;
+}
+
+#footerNavbar {
+    width: 99%;
+    height: 50px;
+
+    display: flex;
+    flex-direction: row;
+    column-gap: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.material-symbols-outlined {
+    font-size: 30px;
+}
+
+
+
+/* Tablet and phone */
+@media only screen and (max-width: 900px) {
+    #header {
+        display: none;
+    }
+    /* #navbarDiv {
+        display: none;
+    } */
+
+    #dropdownNavbarDiv {
+        display: block;
+    }
+
+    /* #footerNavbarDiv {
+        display: block;
+    } */
+}

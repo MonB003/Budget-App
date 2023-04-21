@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign Up</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../styles/style-signup.css" />
+</head>
+
+<body>
+
+    <div id="page">
+
+        <div id="signupDiv">
+            <h1>Sign Up</h1>
+
+            <form id="signupForm">
+                <label for="firstName">First Name: <abbr title="Required" class="star">*</abbr></label>
+                <br>
+                <input type="text" id="firstName" class="signup-input" name="firstName" placeholder="First Name"
+                    maxlength="30" required="required">
+                <br><br>
+                <label>Last Name: <abbr title="Required" class="star">*</abbr></label>
+                <br>
+                <input type="text" id="lastName" class="signup-input" name="lastName" placeholder="Last Name"
+                    maxlength="30" required="required">
+                <br><br>
+                <label>Username: <abbr title="Required" class="star">*</abbr></label>
+                <br>
+                <input type="text" id="username" class="signup-input" name="username" placeholder="Username"
+                    maxlength="30" required="required">
+                <br><br>
+                <label>Birthday: <abbr title="Required" class="star">*</abbr></label>
+                <br>
+                <input type="date" id="birthday" class="signup-input" name="birthday" required="required" />
+                <br><br>
+                <label>Budget: <abbr title="Required" class="star">*</abbr></label>
+                <br>
+                <input type="number" id="budget" class="signup-input" name="budget" placeholder="1000" min="1"
+                    max="1000000000" required="required" />
+                <br><br>
+                <label>Email: <abbr title="Required" class="star">*</abbr></label>
+                <br>
+                <input type="email" id="email" class="signup-input" name="email" placeholder="Email@email.ca"
+                    maxlength="30" required="required">
+                <br><br>
+                <label>Password: <abbr title="Required" class="star">*</abbr></label>
+                <br>
+                <input type="password" id="password" class="signup-input" name="password" placeholder="Password"
+                    maxlength="30" required="required">
+                <br><br>
+                <button type="button" id="signUpBtn" onclick="signup()">Sign Up</button>
+                <br>
+                <p id="errorMsg"></p>
+            </form>
+
+            <div id="loginPage">
+                <h4 id="or">OR</h4>
+                <br>
+                <button onclick="loginPage()">Return to Login</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="../scripts/client-signup.js"></script>
+
+</body>
+
+</html>

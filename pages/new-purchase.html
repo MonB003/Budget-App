@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>New Purchase</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <link rel="stylesheet" href="../styles/style-navbar.css" />
+    <link rel="stylesheet" href="../styles/style-new-purchase.css" />
+</head>
+
+<body>
+
+    <header id="header">
+
+        <div id="navbarDiv">
+            <nav id="navbar">
+                <a href="#" id="home" class="nav-options" onclick="homePage()">Home</a>
+                <a href="#" id="settings" class="nav-options" onclick="settingsPage()">Settings</a>
+                <a href="#" id="newPurchase" class="nav-options" onclick="newPurchasePage()">New Purchase</a>
+                <a href="#" id="allPurchases" class="nav-options" onclick="allPurchasesPage()">All Purchases</a>
+                <a href="#" id="help" class="nav-options" onclick="helpPage()">Help</a>
+            </nav>
+        </div>
+
+    </header>
+
+    <div id="dropdownNavbarDiv">
+        <span id="vertMenuIcon" class="material-symbols-outlined" onclick="menubarStatus()">more_vert</span>
+
+        <nav id="dropdownNavbar">
+            <a href="#" id="homeDropdown" class="nav-dropdown-options" onclick="homePage()">Home</a>
+            <a href="#" id="settingsDropdown" class="nav-dropdown-options" onclick="settingsPage()">Settings</a>
+            <a href="#" id="newPurchaseDropdown" class="nav-dropdown-options" onclick="newPurchasePage()">New
+                Purchase</a>
+            <a href="#" id="allPurchasesDropdown" class="nav-dropdown-options" onclick="allPurchasesPage()">All
+                Purchases</a>
+            <a href="#" id="helpDropdown" class="nav-dropdown-options" onclick="helpPage()">Help</a>
+        </nav>
+    </div>
+
+    <br>
+
+    <div id="page">
+        <h1>New Purchase</h1>
+
+        <form id="newPurchaseForm">
+            <label>Item <abbr title="Required" class="star">*</abbr></label>
+            <br>
+            <input type="text" id="item" class="new-purchase-input" name="item" placeholder="Item" maxlength="100"
+                required="required">
+            <br><br>
+
+            <label>Expense Type <abbr title="Required" class="star">*</abbr></label>
+            <br>
+            <select name="expense-type" id="expenseType">
+                <option value="Housing" id="housing">Housing</option>
+                <option value="Food" id="food">Food</option>
+                <option value="Transportation" id="transportation">Transportation</option>
+                <option value="Health" id="health">Health</option>
+                <option value="Bills" id="bills">Utility Bills</option>
+                <option value="Loans" id="loans">Loans</option>
+                <option value="Entertainment" id="entertainment">Entertainment</option>
+                <option value="Miscellaneous" id="miscellaneous" selected="selected">Miscellaneous</option>
+            </select>
+            <br><br>
+
+            <label>Date of Purchase <abbr title="Required" class="star">*</abbr></label>
+            <br>
+            <input type="date" id="date" class="new-purchase-input" name="date" required="required" />
+            <br><br>
+
+            <label>Price <abbr title="Required" class="star">*</abbr></label>
+            <br>
+            <input type="number" id="price" class="new-purchase-input" name="price" placeholder="100" min="1"
+                max="1000000000" required="required" />
+
+            <br><br>
+            <!-- <button type="button" id="addPurchaseBtn" onclick="addPurchase()">Add Purchase</button> -->
+            <button type="button" id="addPurchaseBtn" onclick="checkUserMoneyAmt()">Add Purchase</button>
+            <!-- <button type="button" id="testBtn" onclick="test()">Add Purchase</button> -->
+            <br>
+            <p id="errorMsg"></p>
+        </form>
+
+        <!-- <button type="button" id="test" onclick="test()">Test</button> -->
+
+    </div>
+
+
+    <!-- Popup that appears after user adds a purchase -->
+    <div id="popupBudgetComparison">
+        <div id="popupBudgetContent">
+            <p id="popupMoneyMsg">Purchase complete. Money left to spend: $<span id="popupMoneyLeft"></span></p>
+
+            <p id="popupErrorMsg"></p>
+            <br>
+            <div id="popupBtnsDiv">
+                <!-- Goes back to main -->
+                <button type="button" id="okBtn">Ok</button>
+                <!-- Stays on new purchase page and closes div -->
+                <button type="button" id="cancelBtn" onclick="closePopup()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="../scripts/navbar.js"></script>
+    <script src="../scripts/client-new-purchase.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Help</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <link rel="stylesheet" href="../styles/style-navbar.css" />
+    <link rel="stylesheet" href="../styles/style-help.css" />
+</head>
+
+<body>
+
+    <header id="header">
+
+        <div id="navbarDiv">
+            <nav id="navbar">
+                <a href="#" id="home" class="nav-options" onclick="homePage()">Home</a>
+                <a href="#" id="settings" class="nav-options" onclick="settingsPage()">Settings</a>
+                <a href="#" id="newPurchase" class="nav-options" onclick="newPurchasePage()">New Purchase</a>
+                <a href="#" id="allPurchases" class="nav-options" onclick="allPurchasesPage()">All Purchases</a>
+                <a href="#" id="help" class="nav-options" onclick="helpPage()">Help</a>
+            </nav>
+        </div>
+
+    </header>
+
+    <div id="dropdownNavbarDiv">
+        <span id="vertMenuIcon" class="material-symbols-outlined" onclick="menubarStatus()">more_vert</span>
+
+        <nav id="dropdownNavbar">
+            <a href="#" id="homeDropdown" class="nav-dropdown-options" onclick="homePage()">Home</a>
+            <a href="#" id="settingsDropdown" class="nav-dropdown-options" onclick="settingsPage()">Settings</a>
+            <a href="#" id="newPurchaseDropdown" class="nav-dropdown-options" onclick="newPurchasePage()">New Purchase</a>
+            <a href="#" id="allPurchasesDropdown" class="nav-dropdown-options" onclick="allPurchasesPage()">All Purchases</a>
+            <a href="#" id="helpDropdown" class="nav-dropdown-options" onclick="helpPage()">Help</a>
+        </nav>
+    </div>
+
+    <br>
+
+    <div id="page">
+        <a id="topOfPage"></a>
+        <h1>Help</h1>
+        <br>
+        <nav id="helpPageNavigation">
+            <h3>Navigation</h3>
+            <a href="#addAPurchase" class="page-navigation">Add a Purchase</a>
+            <a href="#deleteAPurchase" class="page-navigation">Delete a Purchase</a>
+            <a href="#viewEditAccount" class="page-navigation">View and Edit Your Account</a>
+            <a href="#viewBudgetInfo" class="page-navigation">View Your Budget Information</a>
+            <a href="#addMoneyEarned" class="page-navigation">Add to Your Money Earned</a>
+        </nav>
+
+        <br>
+
+        <div id="addAPurchase">
+            <h3>Add a Purchase:</h3>
+            <ol>
+                <li>Click the <i>New Purchase</i> option in the navbar. This will redirect you to the new purchase page.</li>
+                <li>Fill in all the fields with your purchase information.</li>
+                <li>Click the <i>Add Purchase</i> button.</li>
+            </ol>
+        </div>
+
+        <div id="deleteAPurchase">
+            <h3>Delete a Purchase:</h3>
+            <ol>
+                <li>From either the main page or all purchases page, click the <i>Remove</i> button on the purchase you want to remove.</li>
+                <li>A popup will appear asking to confirm that you want to delete the purchase.</li>
+                <li>To delete the purchase, click the <i>Remove</i> button.</li>
+            </ol>
+        </div>
+
+        <div id="viewEditAccount">
+            <h3>View and Edit Your Account:</h3>
+            <ol>
+                <li>Click the <i>Settings</i> option in the navbar. This will redirect you to the settings page.</li>
+                <li>On the left side of the page, click the <i>Account</i> option.</li>
+                <li>Your current information will be filled into the input fields. You can edit any of these fields to change your information.</li>
+                <li>To save your edited account information, click the <i>Save</i> button.</li>
+            </ol>
+        </div>
+
+        <div id="viewBudgetInfo">
+            <h3>View Your Budget Information:</h3>
+            <ol>
+                <li>Click the <i>Settings</i> option in the navbar. This will redirect you to the settings page.</li>
+                <li>On the left side of the page, click the <i>Budget</i> option.</li>
+                <li>Your current budget will be at the top of the page.</li>
+                <li>You will see how much money you've currently spent this month.</li>
+                <li>If you have gone over your budget, you will see how much you went over your budget by. If you have not gone over your budget, you will see how much money you have left to spend.</li>
+            </ol>
+        </div>
+
+        <div id="addMoneyEarned">
+            <h3>Add to Your Money Earned:</h3>
+            <ol>
+                <li>Click the <i>Settings</i> option in the navbar. This will redirect you to the settings page.</li>
+                <li>On the left side of the page, click the <i>Money Earned</i> option.</li>
+                <li>Fill in the input field with the amount of mmoney you've earned. </li>  
+                <ul>
+                    <li><b>Note:</b> The amount inputted must be between 1 and 1000000000.</li>
+                </ul>              
+                <li>To add your money earned to your account, click the <i>Save</i> button.</li>
+                <li>You will see your updated total money earned on the page.</li>
+            </ol>
+        </div>
+
+        <br>
+
+        <nav>
+            <a href="#topOfPage">Top of the Page</a>
+        </nav>
+
+    </div>
+
+
+
+    <script src="../scripts/navbar.js"></script>
+
+</body>
+
+</html>

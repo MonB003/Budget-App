@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Main</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <link rel="stylesheet" href="../styles/style-navbar.css" />
+    <link rel="stylesheet" href="../styles/style-display-purchases.css" />
+    <link rel="stylesheet" href="../styles/style-main.css" />
+</head>
+
+<body>
+
+    <header id="header">
+        <span id="userFullName"></span>
+
+        <div id="navbarDiv">
+            <nav id="navbar">
+                <a href="#" id="home" class="nav-options" onclick="homePage()">Home</a>
+                <a href="#" id="settings" class="nav-options" onclick="settingsPage()">Settings</a>
+                <a href="#" id="newPurchase" class="nav-options" onclick="newPurchasePage()">New Purchase</a>
+                <a href="#" id="allPurchases" class="nav-options" onclick="allPurchasesPage()">All Purchases</a>
+                <a href="#" id="help" class="nav-options" onclick="helpPage()">Help</a>
+                <form action="/logout" method="get" id="logoutForm">
+                    <input type="submit" id="logout" class="nav-options" value="Logout" />
+                </form>
+            </nav>
+        </div>
+
+    </header>
+
+    <!-- <p id="userFullNameDropdown"></p> -->
+    <div id="dropdownNavbarDiv">
+        <span id="vertMenuIcon" class="material-symbols-outlined" onclick="menubarStatus()">more_vert</span>
+        <!-- <span id="userFullNameDropdown"></span> -->
+
+        <nav id="dropdownNavbar">
+            <a href="#" id="homeDropdown" class="nav-dropdown-options" onclick="homePage()">Home</a>
+            <a href="#" id="settingsDropdown" class="nav-dropdown-options" onclick="settingsPage()">Settings</a>
+            <a href="#" id="newPurchaseDropdown" class="nav-dropdown-options" onclick="newPurchasePage()">New Purchase</a>
+            <a href="#" id="allPurchasesDropdown" class="nav-dropdown-options" onclick="allPurchasesPage()">All Purchases</a>
+            <a href="#" id="helpDropdown" class="nav-dropdown-options" onclick="helpPage()">Help</a>
+            <form action="/logout" method="get" id="logoutFormDropdown">
+                <input type="submit" id="logoutDropdown" class="nav-dropdown-options" value="Logout" />
+            </form>
+        </nav>
+    </div>
+    <p id="userFullNameDropdown"></p>
+
+    <br>
+
+    <div id="page">
+
+        <h1>Recent Purchases</h1>
+        <div id="recentPurchasesDiv">
+            <template id="purchaseTemplate">
+                <div class="purchaseDiv">
+                    <h3 class="purchase-price"></h3>
+                    <p class="purchase-item"></p>
+                    <p class="purchase-expense"></p>
+                    <button class="remove-purchase-btn">Remove</button>
+                    <p class="purchase-date"></p>
+                    <p class="purchase-time"></p>
+                </div>
+            </template>
+        </div>
+
+
+        <!-- Popup that appears when user wants to delete a purchase -->
+        <div id="removePurchaseDiv">
+            <div id="removeMsgContent">
+                <p id="confirmationMsg">Do you want to remove this purchase?</p>
+                <br>
+                <div id="popupBtnsDiv">
+                    <button type="button" id="removeMsgBtn">Remove</button>
+                    <button type="button" id="cancelMsgBtn" onclick="cancelRemove()">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="../scripts/navbar.js"></script>
+    <script src="../scripts/client-main.js"></script>
+
+</body>
+
+</html>

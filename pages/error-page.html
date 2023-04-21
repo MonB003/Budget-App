@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Error</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <link rel="stylesheet" href="../styles/style-navbar.css" />
+</head>
+
+<body>
+
+    <header id="header">
+
+        <div id="navbarDiv">
+            <nav id="navbar">
+                <a href="#" id="home" class="nav-options" onclick="homePage()">Home</a>
+                <a href="#" id="settings" class="nav-options" onclick="settingsPage()">Settings</a>
+                <a href="#" id="newPurchase" class="nav-options" onclick="newPurchasePage()">New Purchase</a>
+                <a href="#" id="allPurchases" class="nav-options" onclick="allPurchasesPage()">All Purchases</a>
+                <a href="#" id="help" class="nav-options" onclick="helpPage()">Help</a>
+            </nav>
+        </div>
+
+    </header>
+
+    <div id="dropdownNavbarDiv">
+        <span id="vertMenuIcon" class="material-symbols-outlined" onclick="menubarStatus()">more_vert</span>
+
+        <nav id="dropdownNavbar">
+            <a href="#" id="homeDropdown" class="nav-dropdown-options" onclick="homePage()">Home</a>
+            <a href="#" id="settingsDropdown" class="nav-dropdown-options" onclick="settingsPage()">Settings</a>
+            <a href="#" id="newPurchaseDropdown" class="nav-dropdown-options" onclick="newPurchasePage()">New Purchase</a>
+            <a href="#" id="allPurchasesDropdown" class="nav-dropdown-options" onclick="allPurchasesPage()">All Purchases</a>
+            <a href="#" id="helpDropdown" class="nav-dropdown-options" onclick="helpPage()">Help</a>
+        </nav>
+    </div>
+
+    <br>
+
+    <div id="page">
+        <h1>Page Not Found</h1>
+
+    </div>
+
+
+
+    <script src="../scripts/navbar.js"></script>
+
+</body>
+
+</html>

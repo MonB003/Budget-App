@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
+
+/* Indicates the page the user's on */
+#settings {
+    background-color: #6D2E46;
+    padding: 15px 4px;
+}
+
+
+/* .account-input { */
+input {
+    border: none;
+    background: none;
+    border-bottom: 1px solid lightgrey;
+    font-size: 16px;
+    font-family: 'Manrope', sans-serif;
+    color: black;
+    width: 40%;
+}
+
+select {
+    font-size: 15px;
+    font-family: 'Manrope', sans-serif;
+    width: 40%;
+}
+
+.star {
+    text-decoration: none;
+    color: red;
+}
+
+#errorMsg {
+    font-size: 16px;
+    color: red;
+}
+
+button {
+    font-family: 'Manrope', sans-serif;
+    font-size: 19px;
+    background-color: #A6B1E1;
+    border-color: #4d5ca1;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ccd2f1;
+}
+
+
+
+#page {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5%;
+    height: 85vh;
+}
+
+#pageDiv {
+    grid-column: 1 / span 1;
+    border: 3px solid lightgrey;
+}
+
+#budgetOptions {
+    display: flex;
+    flex-direction: column;
+}
+
+#accountDiv, #securityDiv, #budgetDiv, #moneyEarnedDiv, #moneySpentCategoriesDiv {
+    display: none;
+    flex-direction: column;
+    width: 70%;
+}
+
+.side-options {
+    text-decoration: none;
+    color: black;
+    padding: 6px;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+}
+
+
+#categoriesCountDiv {
+    width: 98%;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    column-gap: 4%;    
+}
+
+
+/* Tablet and phone */
+@media only screen and (max-width: 900px) {
+    #page {
+        flex-direction: column;
+        row-gap: 3%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    select {
+        width: 300px;
+    }
+    
+
+    #accountForm, #securityForm, #innerMoneyEarnedDiv, #innerBudgetDiv {
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #moneySpentCategoriesDiv {
+        width: 95vw;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    #categoriesCountDiv {
+        display: flex;
+        flex-direction: column;
+        column-gap: 0;
+        row-gap: 4%;
+        align-items: center;
+    }
+}

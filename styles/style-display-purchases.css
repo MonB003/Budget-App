@@ -1,0 +1,61 @@
+.purchaseDiv {
+    border: 2px groove #bd9162;
+    background-color: #dbcdcd;
+    padding: 5px;
+    box-shadow: 4px 4px 4px #dbcdcd;
+}
+
+.purchaseDiv:hover {
+    box-shadow: 8px 8px 8px #dbcdcd;
+}
+
+.purchase-price {
+    color: #6D2E46;
+    font-size: 2vw;
+}
+
+.purchase-item, .purchase-expense {
+    color: #6D2E46;
+    font-size: 1.5vw;
+}
+
+.purchase-date, .purchase-time {
+    color: #6D2E46;
+    font-size: 1vw;
+    text-align: right;
+}
+
+.remove-purchase-btn {
+    border: 2px solid #6D2E46;
+    border-radius: 8px;
+    background: none;
+    color: #6D2E46;
+    cursor: pointer;
+}
+
+
+
+/* Tablet and phone */
+@media only screen and (max-width: 950px) {
+    #allPurchasesDiv {
+        display: grid;
+        grid-template-columns: 98%;
+        column-gap: 0;
+    }
+
+    .purchase-price {
+        font-size: 20px;
+    }
+    
+    .purchase-item, .purchase-expense {
+        font-size: 18px;
+    }
+    
+    .purchase-date, .purchase-time {
+        font-size: 14px;
+    }
+
+    .remove-purchase-btn {
+        font-size: 16px;
+    }
+}

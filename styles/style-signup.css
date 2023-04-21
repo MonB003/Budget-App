@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgb(214, 229, 227) 0%, rgb(213, 185, 178) 50%, rgb(211, 131, 111) 100%);
+}
+
+#page {
+    min-width: 300px;
+}
+
+#appTitle {
+    text-align: center;
+}
+
+
+#loginHeading {
+    font-size: 24px;
+}
+
+#signupDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#signupForm,
+#loginPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    width: 65%;
+}
+
+#loginPage {
+    padding-bottom: 8px;
+}
+
+.signup-input {
+    border: none;
+    background: none;
+    border-bottom: 1px solid lightgrey;
+    font-size: 16px;
+    font-family: 'Manrope', sans-serif;
+    width: 40%;
+}
+
+/* When input is clicked/selected */
+.signup-input:focus {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid lightgrey;
+}
+
+/* Give space above first label */
+label[for="firstName"] {
+    padding-top: 5px;
+ }
+
+.star {
+    text-decoration: none;
+    color: red;
+}
+
+#errorMsg {
+    font-size: 16px;
+    color: red;
+}
+
+button {
+    font-family: 'Manrope', sans-serif;
+    font-size: 19px;
+    background-color: #A6B1E1;
+    border-color: #4d5ca1;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ccd2f1;
+}
+
+#or {
+    margin: 0;
+}

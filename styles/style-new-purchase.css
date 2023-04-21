@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
+/* Indicates the page the user's on */
+#newPurchase {
+    background-color: #6D2E46;
+    padding: 15px 4px;
+}
+
+
+#newPurchaseForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    font-size: 18px;
+}
+
+.new-purchase-input {
+    border: none;
+    background: none;
+    border-bottom: 1px solid lightgrey;
+    font-size: 16px;
+    font-family: 'Manrope', sans-serif;
+    width: 20%;
+}
+
+/* When input is clicked/selected */
+.new-purchase-input:focus {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid lightgrey;
+}
+
+#expenseType {
+    font-size: 15px;
+    font-family: 'Manrope', sans-serif;
+    width: 15%;
+}
+
+
+.star {
+    text-decoration: none;
+    color: red;
+}
+
+#errorMsg {
+    font-size: 16px;
+    color: red;
+}
+
+#addPurchaseBtn, #okBtn, #cancelBtn {
+    font-family: 'Manrope', sans-serif;
+    font-size: 19px;
+    background-color: #A6B1E1;
+    border-color: #4d5ca1;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#addPurchaseBtn:hover, #okBtn:hover, #cancelBtn:hover {
+    background-color: #ccd2f1;
+}
+
+#cancelBtn {
+    background-color: #dddee1;
+    border-color: #54565d;
+}
+
+#cancelBtn:hover {
+    background-color: #eaebec;
+}
+
+
+
+/* Popup div after purchase */
+/* #popupBudgetComparison {
+    display: none;
+} */
+
+/* Popup confirmation div */
+#popupBudgetComparison {
+    /* Hide popup until button is clicked */
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* Tinted outer background */
+    background-color: rgba(216, 168, 168, 0.3);
+}
+
+/* Popup confirmation details */
+#popupBudgetContent {
+    background-color: #edfcfe;
+    margin: 10% auto 15% auto;
+    width: 50%;
+    height: 50%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Tablet and phone */
+@media only screen and (max-width: 900px) {
+    .new-purchase-input {
+        width: 150px;
+        font-size: 14px;
+    }
+
+    #expenseType {
+        width: 140px;
+        font-size: 14px;
+    }
+}
