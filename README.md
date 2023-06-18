@@ -1,5 +1,5 @@
 # Budget App
-> This is an app that helps you keep track of your purchases and how much money you're spending.
+> This is a personal project that helps you keep track of your purchases and how much money you're spending.
 
 <br>
 
